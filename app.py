@@ -13,7 +13,7 @@ os.makedirs("static", exist_ok=True)
 
 @lru_cache(maxsize=100)
 def fetch_currency_codes(date_key):
-    """Fetch all available currency codes from API"""
+    """Fetch all available currency codes"""
     url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/codes"
     try:
         response = requests.get(url, timeout=5)
